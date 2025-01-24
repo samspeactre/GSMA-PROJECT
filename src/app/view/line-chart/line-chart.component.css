@@ -1,0 +1,9 @@
+.line-chart{
+  margin-top: 0.9vw;
+  padding: 0vw 2vw 0vw 1.5vw;
+
+  canvas{
+    width: 100% !important;
+    height: 20vw !important;
+  }
+}

@@ -1,0 +1,86 @@
+<section *ngIf="!isChildRoute">
+  <div class="content">
+    <div class="dash-head">Content</div>
+
+    <div class="filters flex justify-between">
+      <div class="srch-bar">
+        <img src="../../../assets/icons/search.svg" alt="" class="search-icon">
+        <input type="search" placeholder="Search content by title, description">
+        <div class="filter-btn">
+          <button class="flex item-center pointer">
+            <img src="../../../assets/icons/filter.svg" alt="">
+            <span>Filter</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="sub-filter flex">
+        <button class="pointer">Modules</button>
+        <button class="pointer" [routerLink]="['/dashboard/content/all-courses']">Courses</button>
+        <button class="pointer">Learning Path</button>
+      </div>
+
+    </div>
+
+    <div class="new-page flex">
+      <button class="pointer">
+        <img src="../../../assets/icons/module.svg" alt="">
+        <h5>Create a Module</h5>
+      </button>
+
+      <button class="pointer">
+        <img src="../../../assets/icons/book.svg" alt="">
+        <h5>Create a Course</h5>
+      </button>
+
+      <button class="pointer">
+        <img src="../../../assets/icons/learning-path.svg" alt="">
+        <h5>Create a learning path</h5>
+      </button>
+
+      <button class="pointer">
+        <img src="../../../assets/icons/bulk.svg" alt="">
+        <h5>Bulk Imports</h5>
+      </button>
+    </div>
+
+    <hr>
+
+    <div class="flex justify-between">
+
+      <div class="course">
+        <h5>Recently Viewed</h5>
+        <div class="card-box flex justify-between">
+          <div class="card" *ngFor="let item of course">
+            <img [src]="item.imgsrc" alt="">
+            <div class="detail">
+              <h1>{{item.head}}</h1>
+              <span class="tag">{{item.tag}}</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="imports">
+        <h5>Recent Imports</h5>
+
+        <div class="import-img content-center text-center">
+          <img src="../../../assets/img/import.svg" alt="">
+        </div>
+        <h6>Review the results of recent imports here.</h6>
+        <p>Review the import results for course, collection and completion imports here after each import has finished
+          processing.</p>
+      </div>
+    </div>
+
+    <div class="flex justify-between training item-center">
+      <h1>GSMA Training Content</h1>
+      <button>View All</button>
+    </div>
+
+    <div class="slider">
+      <app-traning-slider></app-traning-slider>
+    </div>
+
+  </div>
+</section>

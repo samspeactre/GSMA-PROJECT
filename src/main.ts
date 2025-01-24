@@ -1,6 +1,17 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { AppComponent } from './app/app.component';
+import { provideHttpClient } from '@angular/common/http';
+import { importProvidersFrom } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-bootstrapApplication(AppComponent, appConfig)
-  .catch((err) => console.error(err));
+// Update paths to match your project structure
+import { routes } from './app/app.routes';  // Correct path to app.routes.ts
+import { AppComponent } from './app/app.component';  // Correct path to app.component.ts
+
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideHttpClient(),
+    importProvidersFrom(RouterModule.forRoot(routes)),
+    importProvidersFrom(BrowserAnimationsModule),
+  ]
+}).catch((err) => console.error(err));

@@ -1,0 +1,55 @@
+<div class="table-container">
+  <!-- Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>
+          <input type="checkbox" [checked]="masterSelected" (change)="toggleAllSelection()" />
+        </th>
+        <th>User</th>
+        <th>Access Level</th>
+        <th>Status</th>
+        <th>Last Login</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let user of paginatedUsers">
+        <td>
+          <input type="checkbox" [(ngModel)]="user.selected" (change)="toggleUserSelection()" />
+        </td>
+        <td>
+          {{ user.name }}
+          <div class="mail">{{ user.email }}</div>
+        </td>
+        <td>{{ user.accessLevel }}</td>
+        <td>
+          <span [ngClass]="{'active-status': user.status === 'Active', 'inactive-status': user.status === 'InActive'}"
+            class="tag">
+            {{ user.status }}
+          </span>
+        </td>
+        <td>{{ user.lastLogin }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Footer -->
+  <div class="footer flex justify-between item-center">
+    <span class="selected">{{ selectedCount }} People</span>
+    <div class="pagination flex content-center item-center">
+      <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1" class="pagination-btn">
+        <i class="fa-solid fa-angle-left"></i>
+      </button>
+
+      <button *ngFor="let page of paginationPages" (click)="changePage(page)" [class.active]="page === currentPage"
+        class="pagination-page">
+        {{ page }}
+      </button>
+
+      <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages" class="pagination-btn">
+        <i class="fa-solid fa-angle-right"></i>
+      </button>
+    </div>
+  </div>
+</div>

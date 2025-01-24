@@ -1,0 +1,81 @@
+<div class="content-page-link flex">
+  <a href="/dashboard/content/all-courses" class="dec-none">courses</a>/<div>Leadership Suite - Impostor Syndrome in
+    New Managers 1.0</div>
+</div>
+
+<div class="flex sub-content-page justify-between">
+  <div class="left-content-side-link flex justify-between">
+    <div class="insideLeft">
+      <div class="course-img">
+        <img src="../../../../assets/img/content-course.svg" alt="">
+      </div>
+      <div class="detail">
+        <div class="title">Leadership Suite - Impostor Syndrome in New Managers 1.0</div>
+
+        <div class="flex three item-center">
+          <div class="tag">marketing course</div>
+          <div class="time flex item-center">
+            <img src="../../../../assets/icons/stop-watch.svg" alt="">
+            <span>5 minutes</span>
+          </div>
+          <div class="refer-code">LH13041</div>
+        </div>
+
+        <div class="desc">
+          Impostor syndrome is not a new concept in the business world. One area where it is noticeably prevalent is in
+          new managers. In this course we will highlight why new managers can often struggle with impostor syndrome, the
+          different ways it can manifest within you, and impart some techniques you can use to conquer the feelings of
+          professional inadequacy.
+        </div>
+
+        <div class="objective">
+          <h5>Learning Objectives </h5>
+
+          <ul>
+            <li class="dec-none">Understand the concept of impostor syndrome </li>
+            <li class="dec-none">Recognize the different ways impostor syndrome can manifest itself in new managers
+            </li>
+            <li class="dec-none">Understand how to respond to the different types of impostor syndrome </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="insideRight">
+
+      <ng-container *ngIf="activeComponent === 'content'">
+        <app-content-module></app-content-module>
+      </ng-container>
+      <ng-container *ngIf="activeComponent === 'people'">
+        <app-content-people></app-content-people>
+      </ng-container>
+      <ng-container *ngIf="activeComponent === 'learning-path'">
+       <app-content-learning></app-content-learning>
+      </ng-container>
+      <ng-container *ngIf="activeComponent === 'teams'">
+       <app-content-teams></app-content-teams>
+      </ng-container>
+      <ng-container *ngIf="activeComponent === 'instructor'">
+       <app-content-instructors></app-content-instructors>
+      </ng-container>
+      <ng-container *ngIf="activeComponent === 'noticeboard'">
+       <app-content-noticeboard></app-content-noticeboard>
+      </ng-container>
+      <ng-container *ngIf="activeComponent === 'references'">
+       <app-content-references></app-content-references>
+      </ng-container>
+      <ng-container *ngIf="activeComponent === 'rating'">
+       <app-content-ratings></app-content-ratings>
+      </ng-container>
+      <ng-container *ngIf="activeComponent === 'history'">
+       <app-content-history></app-content-history>
+      </ng-container>
+
+    </div>
+  </div>
+  <div class="right-content-side-links" >
+    <app-content-side-links (activeLinkChange)="onActiveLinkChange($event)"></app-content-side-links>
+  </div>
+</div>

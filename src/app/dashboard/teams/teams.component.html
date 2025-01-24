@@ -1,0 +1,64 @@
+<section class="team">
+  <!-- Dynamic Header -->
+  <div class="dash-head">
+    Teams
+  </div>
+
+  <div class="flex justify-between">
+    <div class="tabs">
+      <!-- Tab Headers -->
+      <div class="tab-headers flex justify-between">
+        <div *ngFor="let tab of tabs; let i = index" class="tab-label pointer flex" [class.active]="i === activeTab"
+          (click)="selectTab(i)">
+          {{ tab.label }} <span>({{ totalTeams }})</span>
+        </div>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="tab-content" [@fadeAnimation]>
+        <!-- Teams List -->
+        <div>
+          <h1>{{ currentTeamTitle }}</h1>
+          <ul>
+            <li class="dec-none" *ngFor="let item of tabs[activeTab].teams[currentTeamIndex]?.list">
+              <span [innerHTML]="item"></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex justify-between content-center">
+          <h2>{{ totalTeams }} Teams</h2>
+          <div class="footer">
+            <div class="flex content-center item-center pagination">
+              <!-- Previous Team Button -->
+              <button (click)="changeTeam(currentTeamIndex - 1)" [disabled]="currentTeamIndex === 0"
+                class=" pagination-btn">
+                <i class="fa-solid fa-angle-left"></i>
+              </button>
+
+              <!-- Team Buttons -->
+              <button *ngFor="let team of tabs[activeTab].teams; let i = index" (click)="changeTeam(i)"
+                [class.active]="i === currentTeamIndex" class="pagination-page">
+                {{ i + 1 }}
+              </button>
+
+              <!-- Next Team Button -->
+              <button (click)="changeTeam(currentTeamIndex + 1)"
+                [disabled]="currentTeamIndex === tabs[activeTab].teams.length - 1" class="pagination-btn">
+                <i class="fa-solid fa-angle-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="import justify-center content-center pointer">
+      <img src="../../../assets/icons/bulk-import.svg" alt="">
+      <h5> Import teams in bulk</h5>
+    </button>
+  </div>
+
+
+</section>

@@ -1,0 +1,29 @@
+<section>
+  <h1 class="dash-head">Courses</h1>
+  <div class="main">
+
+    <div class="all-courses flex">
+
+      <div class="course pointer" *ngFor="let item of displayCourses"
+        [routerLink]="['/dashboard/content/course-details', item.id]">
+        <div class="course-img">
+          <img [src]="item.imgsrc" alt="">
+        </div>
+
+        <div class="details">
+          <div class="title">{{item.title}}</div>
+          <p>{{getShortDescription(item.desc)}}</p>
+          <h5>{{item.tag}}</h5>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="load-more " *ngIf="currentIndex < course.length">
+      <button (click)="loadMoreCourses()" class="pointer">Load More</button>
+    </div>
+
+  </div>
+
+</section>

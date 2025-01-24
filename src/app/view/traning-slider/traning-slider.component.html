@@ -1,0 +1,25 @@
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" *ngFor="let item of slide">
+      <a [href]="item.url" target="_blank" class="flex item-center dec-none">
+        <div class="img-box content-center text-center">
+          <img [src]="item.imgsrc" alt="">
+        </div>
+        <div class="detail">
+          <div class="title">Training #{{item.title}} </div>
+          <div class="module">{{item.module}}/04 Modules</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Navigation buttons -->
+  <div class="carousel-btn flex justify-between">
+    <div class="swiper-button-next">
+      <i class="fa-solid fa-angle-right"></i>
+    </div>
+    <div class="swiper-button-prev">
+      <i class="fa-solid fa-angle-left"></i>
+    </div>
+  </div>
+</div>

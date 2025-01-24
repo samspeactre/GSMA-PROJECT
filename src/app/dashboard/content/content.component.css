@@ -1,0 +1,241 @@
+.content {
+
+  .filters {
+    width: 87.5%;
+    margin: auto;
+    position: relative;
+    margin-top: 1.3vw;
+
+    .srch-bar {
+      width: 68.3%;
+      position: relative;
+
+      .search-icon {
+        width: 1.38vw;
+        position: absolute;
+        top: 1.16vw;
+        left: 1.7vw;
+      }
+
+      input {
+        height: 3.8vw;
+        border-radius: 0.2vw;
+        background-color: var(--white);
+        border: 0;
+        width: 100%;
+        padding: 0 8vw 0 3.7vw;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 0.05vw 0.2vw;
+
+        &::placeholder {
+          color: var(--input-text);
+          font-family: "italic";
+          font-size: 0.93vw;
+          letter-spacing: 0.02vw;
+        }
+      }
+
+      .filter-btn {
+        position: absolute;
+        top: 1.3vw;
+        right: 1.7vw;
+
+        button {
+          border: 0;
+          background-color: transparent;
+          color: var(--input-text);
+
+          img {
+            width: 1.4vw;
+          }
+
+          span {
+            margin-left: 0.3vw;
+            font-size: 0.93vw;
+            color: var(--input-text);
+          }
+        }
+
+        &:hover {
+          color: var(--sky);
+        }
+      }
+    }
+  }
+
+  .sub-filter {
+    width: 30%;
+    gap: 0.3vw;
+
+    button {
+      font-size: 0.83vw;
+      height: 3.8vw;
+      padding: 0 1.2vw;
+      color: var(--input-text);
+      background-color: var(--white);
+      border-radius: 0.3vw;
+      border: 0;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 0.05vw 0.2vw;
+      transition: var(--transition);
+
+      &:hover {
+        color: var(--white);
+        background-color: var(--sky);
+      }
+    }
+  }
+
+  .new-page {
+    width: 49%;
+    margin: auto;
+    margin-top: 1.7vw;
+    gap: 1.8%;
+
+    button {
+      background-color: var(--white);
+      color: var(--input-text);
+      border: 0.5vw;
+      padding: 1vw 0;
+      width: 24.3%;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 0.05vw 0.2vw;
+
+      img {
+        width: 1.25vw;
+      }
+
+      h5 {
+        font-size: 0.8vw;
+        margin-top: 0.2vw;
+        font-family: "reg";
+        color: var(--input-text);
+      }
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: 2px solid var(--white);
+    width: 100%;
+    margin: 2.05vw 0 1.6vw;
+  }
+
+  .course {
+    padding: 1.9vw 1.7vw;
+    background-color: var(--white);
+    border-radius: 1vw;
+    width: 67%;
+
+    h5 {
+      font-size: 1.05vw;
+      font-family: "reg";
+      color: var(--black);
+    }
+
+    .card-box {
+      width: 100%;
+
+      .card {
+        margin-top: 0.8vw;
+        width: 23.5%;
+        box-shadow: #c5e8ff 0 0.05vw 0.2vw;
+        border-radius: 1vw;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 6.3vw;
+          object-fit: cover;
+        }
+
+        .detail {
+          padding: 0.7vw 0.8vw;
+          line-height: 1.1vw;
+          background-color: #c5e8ff56;
+          height: 5.2vw;
+
+          h1 {
+            font-size: 0.85vw;
+            font-family: "reg";
+            color: var(--black);
+            padding-right: 1vw;
+          }
+
+          .tag {
+            font-size: 0.7vw;
+            font-family: "reg";
+            color: #177020;
+            padding: 1vw 0.3vw 1.5vw;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+
+  .imports{
+    padding: 1.8vw 1.6vw;
+    background-color: var(--white);
+    border-radius: 1vw;
+    width: 32%;
+
+    h5 {
+      font-size: 1.05vw;
+      font-family: "reg";
+      color: var(--black);
+      text-transform: capitalize;
+    }
+
+    .import-img{
+      margin-top: 1.7vw;
+      background-color: #c5e8ff56;
+      width: 5.8vw;
+      height: 5.8vw;
+      border-radius: 1vw;
+
+      img{
+        width: 5.5vw;
+        height: 5.5vw;
+        object-fit: cover;
+      }
+    }
+
+    h6{
+      font-size: 0.93vw;
+      font-family: 'reg';
+      color: var(--black);
+      margin-top: 1vw;
+    }
+
+    p{
+      margin-top: 0.5vw;
+      font-size: 0.82vw;
+      font-family: 'reg';
+      color: var(--black);
+      padding-right: 2.5vw;
+      line-height: 1.05vw;
+    }
+  }
+
+  .training{
+    margin: 1.6vw 0;
+
+    h1{
+      font-size: 1.05vw;
+      font-family: 'reg';
+      color: var(--black);
+    }
+
+    button{
+      font-size: 0.65vw;
+      padding: 0.5vw 0.5vw;
+      color: var(--white);
+      background-color: var(--sky);
+      border: 0;
+      border-radius: 0.2vw;
+    }
+  }
+
+  .slider{
+    width: 100%;
+    margin-top: 0.9vw;
+  }
+}

@@ -1,0 +1,117 @@
+.create-user {
+  .main-head {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.5vw;
+    height: 100vh;
+    margin-top: 1.8vw;
+
+    form {
+      .left {
+        width: 75%;
+        position: sticky;
+        top: 0vw;
+        width: 75%;
+        background-color: var(--white);
+        border-radius: 1vw;
+        padding: 3.3vw 1.3vw 2vw 1.2vw;
+        overflow-y: auto;
+        height: 93vh;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        .top-form-text {
+          margin-bottom: 1.8vw;
+
+          .italic {
+            background-color: var(--white);
+            border-radius: 1vw;
+            font-size: 0.7vw;
+            font-family: "italic";
+            letter-spacing: 0.05vw;
+            margin-bottom: 0.3vw;
+          }
+
+          strong {
+            font-size: 0.94vw;
+            font-family: "bold";
+            color: var(--black);
+          }
+        }
+
+        .two-field {
+          width: 100%;
+          margin-bottom: 1.1vw;
+
+          .half {
+            width: 47.5%;
+          }
+        }
+
+        .full {
+          width: 100%;
+          margin-bottom: 0.9vw;
+
+          .full-span {
+            font-size: 0.7vw;
+            color: var(--black);
+            font-family: "italic";
+            letter-spacing: 0.05vw;
+          }
+        }
+
+        .checkbox {
+          width: 100%;
+
+          input {
+            width: 1.3vw;
+            height: 1.3vw;
+          }
+
+          span {
+            font-size: 0.82vw;
+            font-family: "reg";
+            color: var(--black);
+            margin-left: 0.5vw;
+            text-transform: capitalize;
+          }
+        }
+
+        .horizontal-line {
+          border: 0;
+          border-top: 0.12vw solid #e5e2e2;
+          width: 100%;
+          margin: 1.8vw 0;
+        }
+
+        .space {
+          margin-bottom: 1vw;
+        }
+
+        .triple {
+          width: 100%;
+          margin-bottom: 1.1vw;
+
+          .third-half {
+            width: 32%;
+          }
+        }
+
+        .text {
+          margin-bottom: 1vw;
+
+          span {
+            font-size: 0.7vw;
+            color: var(--black);
+            font-family: "italic";
+            letter-spacing: 0.04vw;
+          }
+        }
+      }
+    }
+  }
+}

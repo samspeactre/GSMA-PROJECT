@@ -1,0 +1,130 @@
+.ilt-schedule {
+  height: 100vh;
+
+  .main {
+    width: 100%;
+    margin-top: 0.8vw;
+
+    .left {
+      width: 75%;
+      .search-bar {
+        .search-input {
+          background-color: var(--white);
+          letter-spacing: 0.05vw;
+          height: 3.6vw;
+        }
+      }
+
+      .session {
+        width: 100%;
+        border-radius: 1vw;
+        padding: 1.3vw 1.2vw;
+        background-color: var(--white);
+        margin-top: 1.4vw;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 0.05vw 0.2vw;
+
+        h6 {
+          font-size: 0.98vw;
+          font-family: "reg";
+          color: var(--black);
+        }
+
+        .session-event {
+          margin-top: 0.2vw;
+        }
+      }
+
+      .events-list {
+        width: 100%;
+        margin-top: 1.5vw;
+
+        .event {
+          width: 49%;
+          background-color: var(--white);
+          padding: 1vw;
+          border-radius: 1vw;
+          margin-bottom: 1vw;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 0.05vw 0.2vw;
+          position: relative;
+
+          h4 {
+            font-size: 0.95vw;
+            font-family: "reg";
+            letter-spacing: 0.04vw;
+            color: var(--white);
+            padding: 0.5vw 2vw;
+            border-radius: 2vw;
+            background-color: var(--sky);
+            width: fit-content;
+            margin-bottom: 1vw;
+          }
+
+          .event-icon{
+            font-size: 2.5vw;
+            background-color: transparent;
+            border-radius: 50%;
+            padding: 1.7vw;
+            color: var(--sky);
+            box-shadow: #0000003d 0px 0.2vw 1vw inset;
+            position: absolute;
+            right: 2vw;
+            top: 4.5vw;
+          }
+
+          .border{
+            padding: 0.2vw 1vw 0.2vw 0;
+            width: 63%;
+            border-left: 0;
+            border-radius: 1vw;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            box-shadow: rgba(0, 0, 0, 0.25) 0 0.02vw 0.01vw,
+            rgba(0, 0, 0, 0.25) 0.12vw 0.01vw 0.3vw,
+            rgba(255, 255, 255, 0.1) 0vw 0vw 0vw 0.01vw inset;
+            margin-bottom: 0.5vw;
+
+            .full{
+              width: 100%;
+              margin-top: 0.5vw;
+              margin-left: 0;
+            }
+          }
+
+          p{
+            font-size: 1.1vw;
+            font-family: 'med';
+            color: var(--black);
+            margin-bottom: 0.5vw;
+
+            span{
+              font-size: 1vw;
+              margin-left: 0.2vw;
+              font-family: 'reg';
+            }
+          }
+
+          .address{
+            margin: 0.5vw 0 0;
+          }
+        }
+
+        .no-data-text{
+          padding: 2vw 0;
+          width: 100%;
+          background-color: var(--white);
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 0.05vw 0.2vw;
+        }
+      }
+    }
+
+    .right {
+      position: relative;
+      width: 24%;
+
+      .header-form-btn {
+        width: 100%;
+        margin-top: 0.7vw;
+      }
+    }
+  }
+}

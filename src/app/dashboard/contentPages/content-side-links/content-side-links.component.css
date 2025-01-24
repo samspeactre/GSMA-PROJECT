@@ -1,0 +1,30 @@
+.links {
+  background-color: transparent;
+  padding: 1vw;
+  border-radius: 0.5vw;
+  margin-bottom: 0.7vw;
+  color: var(--black);
+  transition: var(--transition);
+
+  i {
+    font-size: 0.95vw;
+    transform: rotate(180);
+  }
+
+  span {
+    font-size: 0.9vw;
+    font-family: "reg";
+    margin-left: 0.8vw;
+    text-transform: capitalize;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover,
+  &.active {
+    background-color: var(--sky);
+    color: var(--white);
+  }
+}

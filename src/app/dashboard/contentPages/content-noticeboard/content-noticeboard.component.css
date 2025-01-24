@@ -1,0 +1,80 @@
+.notice {
+  padding: 1.6vw 2vw;
+  border-radius: 1vw;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0.05vw 0.2vw;
+
+  h2 {
+    font-size: 1vw;
+    letter-spacing: 0.03vw;
+    text-transform: capitalize;
+  }
+
+  .group {
+    margin-top: 1.5vw;
+    font-family: "reg";
+    color: var(--black);
+    padding-bottom: 1.5vw;
+
+    .group-img {
+      width: 6.35vw;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    h1 {
+      font-size: 1.05vw;
+      margin-bottom: 0.5vw;
+    }
+
+    p {
+      font-size: 0.81vw;
+      line-height: 1.2vw;
+      padding-right: 8vw;
+    }
+  }
+
+  .search {
+    margin-top: 0.8vw;
+    width: 100%;
+
+    ::ng-deep app-search-bar .search-icon {
+      width: 1.1vw;
+      position: absolute;
+      top: 0.95vw;
+      left: 1.3vw;
+    }
+
+    ::ng-deep app-search-bar input {
+      height: 2.9vw;
+      background-color: var(--bg);
+      padding: 0 2vw 0 3vw;
+      font-size: 0.8vw;
+    }
+
+    ::ng-deep app-search-bar .filter-btn {
+      display: none;
+    }
+  }
+}
+
+.assign-btn {
+  margin-top: 0.5vw;
+  background-color: var(--sky);
+  height: 3vw;
+  font-size: 0.8vw;
+  font-family: 'reg';
+  border-radius: 0.5vw;
+  border: 0.1vw solid var(--sky);
+  color: var(--white);
+  padding: 0 6.5vw;
+  transition: var(--transition);
+
+  &:hover{
+    background-color: transparent;
+    color: var(--sky);
+  }
+}

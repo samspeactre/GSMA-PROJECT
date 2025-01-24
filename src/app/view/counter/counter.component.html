@@ -1,0 +1,11 @@
+<div class="counter-div flex justify-between">
+  <div class="counter flex" *ngFor="let item of items; let i = index">
+    <div class="img-box text-center content-center" [ngStyle]="{'background-color': item.bgColor}">
+      <img [src]="item.imgSrc" alt="Icon">
+    </div>
+    <div class="counter-text">
+      <h2>{{ item.title }}</h2>
+      <span class="real-counter" [ngStyle]="{'color': item.color}">{{ currentCounts[i] }}</span>
+    </div>
+  </div>
+</div>

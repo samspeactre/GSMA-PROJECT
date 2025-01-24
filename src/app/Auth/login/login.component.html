@@ -1,0 +1,58 @@
+<section class="scroll">
+  <div class="flex main">
+    <div class="left">
+      <div class="img-text">
+        <h2>protecting People, Property & Processes <span>Since 1993</span></h2>
+        <p>Global Security Management Agency, Inc (GSMA) is a leading, regional provider of both Armed and Unarmed
+          security professionals. Our customer base includes commercial businesses, residential property management
+          companies and government agencies, making GSMA robust with experience and capable of sustaining any size
+          contract.</p>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="flex justify-between item-center">
+        <div class="logo">
+          <img src="../../../assets/img/logo.svg" alt="">
+        </div>
+        <div class="toggle-btn flex ">
+          <a href="/" class="active pointer content-center text-center dec-none">Login</a>
+          <a href="/register" class="pointer content-center text-center dec-none">Register</a>
+        </div>
+      </div>
+
+      <div class="text">
+        <h1>Welcome Back!</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+
+      <form (ngSubmit)="onSubmit()">
+        <input type="email" placeholder="Enter your email address*" class="form-input" [(ngModel)]="email" name="email"
+          required />
+        <input type="password" placeholder="Password" class="form-input" [(ngModel)]="password" name="password"
+          required />
+        <div class="flex justify-between item-center">
+          <div class="flex checkbox item-center">
+            <input type="checkbox" [(ngModel)]="rememberMe" name="rememberMe" />
+            <span>Remember me</span>
+          </div>
+          <a href="" class="forget dec-none">Forget Password</a>
+        </div>
+        <button routerLink="/dashboard" class="pointer submit-btn">Login</button>
+
+        <p class="text-center">
+          Don’t have an account? <a href="/register" class="dec-none">SignUp</a>
+        </p>
+
+        <div *ngIf="errorMessage" class="error-message">
+          <p>{{ errorMessage }}</p>
+        </div>
+      </form>
+
+      <div class="copyright text-center">
+        © 2024 GSMA Security. All Rights Reserved.
+      </div>
+
+    </div>
+  </div>
+</section>

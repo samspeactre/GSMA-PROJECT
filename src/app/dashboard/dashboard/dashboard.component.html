@@ -1,0 +1,98 @@
+<section>
+  <div class="dashboard">
+    <div class="dash-head">Dashboard</div>
+
+    <div class="counter-div flex justify-between">
+      <div class="counter flex" *ngFor="let item of items; let i = index">
+        <div class="img-box text-center content-center" [ngStyle]="{'background-color': item.bgColor}">
+          <img [src]="item.imgSrc" alt="Icon">
+        </div>
+        <div class="counter-text">
+          <h2>{{ item.title }}</h2>
+          <span class="real-counter" [ngStyle]="{'color': item.color}">{{ currentCounts[i] }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-between">
+      <div class="activity">
+
+        <div class="flex justify-between items-center top">
+          <h2>Activity</h2>
+          <button class="act-btn pointer">View All</button>
+        </div>
+
+        <div *ngFor="let card of activity" class="act-card flex justify-between">
+          <div class="flex item-center">
+            <div class="profile">
+              <img [src]="card.img" alt="Profile">
+            </div>
+            <div class="detail">
+              <div class="name">{{ card.name }}</div>
+              <p>
+                <span class="black-text">{{ card.detail }}</span>
+                <span *ngIf="card.highlighted" class="blue-text">{{ card.highlighted }}</span>
+              </p>
+            </div>
+          </div>
+          <h5>{{ card.time }}</h5>
+        </div>
+
+      </div>
+
+      <div class="two-box">
+        <div class="module">
+          <h1>Modules Require Marking</h1>
+
+          <table class="custom-table">
+            <thead class="table-head">
+              <tr>
+                <th>Modules</th>
+                <th>Course</th>
+                <th>Type</th>
+                <th>People</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of moduleTable">
+                <td>{{ user.Modules }}</td>
+                <td>{{ user.Course }}</td>
+                <td>{{ user.Type }}</td>
+                <td>{{ user.People }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="news">
+          <div class="flex justify-between item-center top">
+            <h2>News</h2>
+            <button class="act-btn pointer">Show All News</button>
+          </div>
+          <div class="content">
+            <p>Hello! Welcome to the Litmos Training Center! Here, you will be able to access all of the GSMA company
+              standard training modules, updated post orders/ procedures, and officer safety courses. Make sure to check
+              your Litmos account weekly for new uploaded materials in addition to courses that are being assigned to
+              you specifically. Some courses are mandatory, and will have due dates so be mindful of keeping your Litmos
+              account current! If you have any questions call 800-730-0073.</p>
+            <div class="time">44 months ago</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="courses">
+        <h1>Recently Viewed</h1>
+
+        <div *ngFor="let card of course">
+           <div class="flex view item-center">
+            <div class="package text-center"  [ngClass]="card.package">{{card.package}}</div>
+           <div class="desc">{{card.description}}</div>
+           </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

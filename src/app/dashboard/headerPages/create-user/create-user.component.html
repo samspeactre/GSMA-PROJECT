@@ -1,0 +1,227 @@
+<section>
+  <div class="create-user">
+    <h1 class="SPHead">Add a new person</h1>
+    <div class="PageLinks flex">
+      <a href="" class="pointer dec-none">People</a>/ <span>Add a new person</span>
+    </div>
+    <div class="main-head">
+
+      <form [formGroup]="addPersonForm" (ngSubmit)="onSubmit()" class="flex justify-between">
+        <div class="left">
+          <div class="top-form-text">
+            <div class="italic">*is required field</div>
+            <strong>Enter a first name, last name and username to setup a new learner</strong>
+          </div>
+          <div class="flex justify-between two-field">
+            <div class="half">
+              <label class="light-label">First Name*</label>
+              <input type="text" class="light-input" placeholder="-" formControlName="firstName">
+            </div>
+            <div class="half">
+              <label class="light-label">Last Name*</label>
+              <input type="text" class="light-input" placeholder="-" formControlName="lastName">
+            </div>
+          </div>
+
+          <div class="full">
+            <label class="light-label">Username*</label>
+            <input type="text" placeholder="-" class="light-input" formControlName="username">
+            <span class="full-span">Most people use an email address as their username</span>
+          </div>
+
+          <div class="checkbox flex item-center">
+            <input type="checkbox" formControlName="sendEmail">
+            <span>Send an email to this person with a link to login.</span>
+          </div>
+
+          <hr class="horizontal-line">
+
+          <div class="checkbox flex item-center space">
+            <input type="checkbox" formControlName="isActive">
+            <span>Active</span>
+          </div>
+
+          <div class="full">
+            <label class="light-label">Access Level</label>
+            <select id="dropdown" class="light-select" formControlName="accessLevel">
+              <option>Learner</option>
+              <option>Teacher</option>
+            </select>
+          </div>
+
+          <div class="full">
+            <label class="light-label">Email</label>
+            <input type="text" placeholder="-" class="light-input" formControlName="email">
+          </div>
+
+          <div class="checkbox flex item-center space">
+            <input type="checkbox" formControlName="disableEmailNotifications">
+            <span>Disable all email notifications for messages.</span>
+          </div>
+
+          <div class="full">
+            <label class="light-label">Profile Type</label>
+            <select id="dropdown" class="light-select" formControlName="profileType">
+              <option>None</option>
+              <option>On</option>
+            </select>
+          </div>
+
+          <div class="full">
+            <label class="light-label">Password</label>
+            <input [type]="showPassword ? 'text' : 'password'" placeholder="" class="light-input"
+              formControlName="password">
+            <span class="full-span">Password must be contain: 1 uppercase, 1 number, 1 special character, 8
+              characters</span>
+          </div>
+
+          <div class="checkbox flex item-center space">
+            <input type="checkbox" (change)="toggleShowPassword()">
+            <span>Show Password</span>
+          </div>
+
+          <div class="full">
+            <label class="light-label">Title</label>
+            <input type="text" placeholder="" class="light-input" formControlName="title">
+          </div>
+
+          <div class="full">
+            <label class="light-label">Manager</label>
+            <div class="search-bar">
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              <i class="fa-solid fa-xmark clear-icon pointer" *ngIf="searchText && searchText.trim()"
+                (click)="clearSearch()"></i>
+              <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}"
+                placeholder="Search Role" class="search-input" />
+            </div>
+          </div>
+
+          <div class="full">
+            <label class="light-label">Company</label>
+            <input type="text" placeholder="" class="light-input" formControlName="company">
+          </div>
+
+          <div class="full">
+            <label class="light-label">Website</label>
+            <input type="text" placeholder="" class="light-input" formControlName="website">
+          </div>
+
+          <div class="full">
+            <label class="light-label">Inactive Date</label>
+            <input type="text" placeholder="" class="light-input" formControlName="inactiveDate">
+          </div>
+
+          <div class="full">
+            <label class="light-label">External employee ID</label>
+            <input type="text" placeholder="" class="light-input" formControlName="externalEmployeeId">
+          </div>
+
+          <div class="full">
+            <label class="light-label">Job Role</label>
+            <div class="search-bar">
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              <i class="fa-solid fa-xmark clear-icon pointer" *ngIf="searchText && searchText.trim()"
+                (click)="clearSearch()"></i>
+              <input type="text" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}"
+                placeholder="Search Role" class="search-input" />
+            </div>
+          </div>
+
+          <div class="full">
+            <label class="light-label">Address</label>
+            <input type="text" placeholder="-" class="light-input" formControlName="address1">
+            <input type="text" class="light-input" formControlName="address2">
+          </div>
+
+          <div class="full">
+            <label class="light-label">City</label>
+            <input type="text" placeholder="-" class="light-input" formControlName="city">
+          </div>
+
+          <div class="triple flex justify-between">
+            <div class="third-half">
+              <label class="light-label">State/Province</label>
+              <input type="text" placeholder="-" class="light-input" formControlName="state">
+            </div>
+            <div class="third-half">
+              <label class="light-label">Zip Code</label>
+              <input type="text" placeholder="-" class="light-input" formControlName="zipCode">
+            </div>
+            <div class="third-half">
+              <label class="light-label">Country</label>
+              <input type="text" placeholder="-" class="light-input" formControlName="country">
+            </div>
+          </div>
+
+          <div class="full">
+            <label class="light-label">Time Zone</label>
+            <select id="dropdown" class="light-select" formControlName="timeZone">
+              <option>(UTC) coordinated universal time</option>
+              <option>Islamabad</option>
+            </select>
+          </div>
+
+          <div class="full">
+            <label class="light-label">Language</label>
+            <select id="dropdown" class="light-select" formControlName="language">
+              <option>English</option>
+              <option>Urdu</option>
+            </select>
+          </div>
+
+          <div class="full" (click)="openDatepicker(datepickerInput)">
+            <label class="light-label">Date Format</label>
+            <input type="date" class="light-datepicker" #datepickerInput formControlName="dateFormat" />
+          </div>
+
+          <div class="full">
+            <label class="light-label">Brand</label>
+            <select id="dropdown" class="light-select" formControlName="brand">
+              <option>Default</option>
+              <option>Luxury</option>
+            </select>
+          </div>
+
+          <div class="full">
+            <label class="light-label">Work Phone</label>
+            <input type="text" placeholder="-" class="light-input" formControlName="workPhone">
+          </div>
+
+          <div class="full">
+            <label class="light-label">Mobile Phone</label>
+            <input type="text" placeholder="-" class="light-input" formControlName="mobilePhone">
+          </div>
+
+          <div class="checkbox flex item-center space">
+            <input type="checkbox" formControlName="enableTextNotifications">
+            <span>Enable text notification</span>
+          </div>
+
+          <div class="text">
+            <span>The mobile phone should be in this format +15554443333. Be sure to include your country code.</span>
+            <br>
+            <span>By entering your phone number, you may receive recurring SMS alerts from Litmos. Text STOP to
+              unsubscribe at any time. Message & data rates may apply.</span>
+          </div>
+
+          <div class="full">
+            <label class="light-label">Skype</label>
+            <input type="text" placeholder="-" class="light-input" formControlName="skype">
+          </div>
+
+          <div class="full">
+            <label class="light-label">Twitter</label>
+            <input type="text" placeholder="-" class="light-input" formControlName="twitter">
+          </div>
+        </div>
+
+        <div class="header-form-btn">
+          <button type="submit" class="pointer">Add Person</button>
+          <button type="button" class="pointer" (click)="addPersonForm.reset()">Add Another Person</button>
+          <button type="button" class="pointer">Cancel</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>

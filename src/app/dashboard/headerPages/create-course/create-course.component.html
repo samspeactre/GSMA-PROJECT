@@ -1,0 +1,71 @@
+<section>
+  <div class="create-course">
+    <h1 class="SPHead">Create a new course</h1>
+    <div class="PageLinks flex">
+      <a href="" class="pointer dec-none">Courses</a>/ <span>Create a new course</span>
+    </div>
+
+    <div class="flex justify-between main">
+      <form>
+        <!-- Course Title -->
+        <div class="form-group">
+          <label for="course-title">Course Title*</label>
+          <input id="course-title" type="text" class="form-control" />
+        </div>
+
+        <!-- Description -->
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" rows="7" class="form-textarea"></textarea>
+        </div>
+
+        <!-- Reference Code -->
+        <div class="form-group">
+          <label for="reference-code">Reference Code</label>
+          <input id="reference-code" type="text" class="form-control" placeholder="Enter reference code" />
+        </div>
+
+        <!-- Active Checkbox -->
+        <div class="form-group">
+          <label class="check-label">
+            <input type="checkbox" class="checkbox" />
+            Active
+          </label>
+        </div>
+
+        <!-- Course Image Upload -->
+        <div class="form-group">
+          <label>Course Image (Optional)</label>
+          <div class="upload-container text-center ">
+            <input type="file" id="course-image" hidden />
+            <label for="course-image" class="upload-label pointer">
+              <img src="../../../../assets/icons/cloudUpload.svg" alt="Upload" />
+              <p class="upload-image">Upload an Image</p>
+              <p class="small">Recommended Dimensions: 300x300</p>
+              <p class="small">Accepted File Types: .png, .gif, .jpg, .jpeg</p>
+            </label>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-group">
+          <button type="submit" class="pointer">Save</button>
+          <button type="button" class="pointer">Cancel</button>
+        </div>
+      </form>
+
+      <!-- Notifications Section -->
+      <div class="notifications">
+        <h3>Notifications</h3>
+        <p>
+          By default you will be added to the notifications for this course. You can change this or add other administrators to the notifications list by editing the course settings later on.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- <div class="copy-right">
+  <app-copyright></app-copyright>
+</div> -->

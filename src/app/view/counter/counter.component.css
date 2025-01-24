@@ -1,0 +1,38 @@
+.counter-div {
+
+  .counter {
+    background-color: var(--white);
+    padding: 1.2vw 1.4vw;
+    border-radius: 0.5vw;
+    width: 24%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0.05vw 0.2vw;
+
+    .img-box {
+      width: 5vw;
+      height: 5vw;
+      border-radius: 0.2vw;
+      background-color: #0052cc38;
+
+      img {
+        width: 2.47vw;
+        margin-top: 0.3vw;
+      }
+    }
+
+    .counter-text {
+      padding: 0.35vw 1.35vw;
+
+      h2 {
+        font-family: "reg";
+        font-size: 0.91vw;
+        color: var(--text);
+        margin-bottom: 0.3vw;
+      }
+      .real-counter {
+        font-size: 2.6vw;
+        font-family: "med";
+        color: #4fadff;
+      }
+    }
+  }
+}

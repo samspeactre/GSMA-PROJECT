@@ -1,0 +1,126 @@
+<section>
+  <div class="report">
+    <div class="flex top justify-between item-center">
+      <div class="dash-head">Reports</div>
+      <h4>Do you know (last 30 days)</h4>
+      <button class="engine-btn pointer">Reporting Engine</button>
+    </div>
+
+    <div class="counter">
+      <app-counter></app-counter>
+    </div>
+
+    <div class="main flex justify-between">
+
+      <div class="fixed-div">
+        <div class="flex middle">
+          <div class="blueGraph">
+            <h6>Most Active Courses</h6>
+            <app-blue-graph></app-blue-graph>
+          </div>
+          <div class="multiGraph">
+            <h6>Most Active Courses</h6>
+            <app-multi-graph></app-multi-graph>
+          </div>
+        </div>
+
+        <div class="manage-reports">
+          <div class="flex justify-between item-center">
+            <h6>Manage Reports (My Saved/ Favorite Reports)</h6>
+            <button class="schedule-btn pointer">Show all scheduled reports</button>
+          </div>
+
+          <div class="tabs">
+            <!-- Tab Headers -->
+            <div class="tab-headers flex justify-between">
+              <div *ngFor="let tab of tabs; let i = index" class="tab-label pointer flex"
+                [class.active]="i === activeTab" (click)="selectTab(i)">
+                {{ tab.label }} ({{ getRowCount(i) }})
+              </div>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content" [@fadeAnimation]>
+              <!-- Conditional Rendering -->
+              <div *ngIf="tabs?.[activeTab]?.table?.length; else noData">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Report Name</th>
+                      <th>Report Type</th>
+                      <th>Created By</th>
+                      <th>Shared With</th>
+                      <th>Last Modified</th>
+                      <th>Schedule</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let row of tabs[activeTab]?.table">
+                      <td>{{ row.reportName }}
+                        <br />
+                        <span class="subtext">{{ row.reportSchedule }}</span>
+                      </td>
+                      <td>{{ row.reportType }}</td>
+                      <td>{{ row.createdBy }}</td>
+                      <td>{{ row.sharedWith }}</td>
+                      <td>{{ row.lastModified }}</td>
+                      <td>{{ row.schedule }}</td>
+                      <td>
+                        <div class="action flex justify-between">
+                          <a href="">
+                            <img src="../../../assets/icons/edit.svg" alt="">
+                          </a>
+                          <a href="">
+                            <img src="../../../assets/icons/print.svg" alt="">
+                          </a>
+                          <a href="">
+                            <img src="../../../assets/icons/delete.svg" alt="">
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- No Data Template -->
+              <ng-template #noData>
+                <p class="no-data-text text-center">Data is not available</p>
+              </ng-template>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="login-activity">
+          <h6>People Login Activity</h6>
+          <app-line-chart></app-line-chart>
+        </div>
+
+      </div>
+
+      <div class="right-div">
+        <div class="quick-reports">
+          <h6>Quick Reports</h6>
+
+          <ul>
+            <li class="dec-none" *ngFor="let item of quickReports">
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+
+        <div class="usage-reports">
+          <h6>Usage Reports</h6>
+
+          <ul>
+            <li class="dec-none" *ngFor="let item of usageReports">
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

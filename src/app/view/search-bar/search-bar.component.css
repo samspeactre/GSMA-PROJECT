@@ -1,0 +1,118 @@
+.srch-bar {
+  width: 100%;
+  position: relative;
+
+  /* .search-icon {
+    width: 1.38vw;
+    position: absolute;
+    top: 1.16vw;
+    left: 1.7vw;
+  } */
+
+  input {
+    /* height: 3.8vw; */
+    border-radius: 0.2vw;
+    /* background-color: var(--bg-color); */
+    border: 0;
+    width: 100%;
+    /* padding: 0 8vw 0 3.7vw; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0.05vw 0.2vw;
+
+    &::placeholder {
+      color: var(--input-text);
+      font-family: "italic";
+      /* font-size: 0.93vw; */
+      letter-spacing: 0.02vw;
+    }
+
+    &:focus {
+      outline: none;
+      border: 0;
+    }
+  }
+
+  .filter-btn {
+    position: absolute;
+    /* top: 1.3vw;
+    right: 1.7vw; */
+
+    button {
+      border: 0;
+      background-color: transparent;
+      color: var(--input-text);
+
+      /* img {
+        width: 1.4vw;
+      } */
+
+      span {
+        margin-left: 0.3vw;
+        /* font-size: 0.93vw; */
+        color: var(--input-text);
+      }
+    }
+
+    &:hover {
+      color: var(--sky);
+    }
+  }
+
+  .filter-panel {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    background-color: var(--white);
+    z-index: 3;
+    box-shadow: rgb(0 0 0 / 32%) 0px 0.05vw 0.2vw;
+
+    .filter-options {
+      width: 100%;
+      flex-wrap: wrap;
+      padding: 0.5vw 0.8vw;
+
+      .filter-option {
+        width: 49%;
+        height: 1.7vw;
+
+        input{
+          height: 0.9vw;
+          width: 0.9vw;
+          box-shadow: none;
+        }
+
+        .filter-name {
+          font-size: 1.1vw;
+          font-family: "med";
+          color: var(--input-text);
+          margin-left: 0.8vw;
+        }
+      }
+
+      .btn-div {
+        width: 100%;
+
+        button {
+          width: 47%;
+          height: 2vw;
+          border: 0;
+          color: var(--white);
+          font-family: "med";
+          font-size: 0.8vw;
+          margin-top: 0.5vw;
+          border-radius: 0.2vw;
+          transition: var(--transition);
+        }
+
+        .remove-all-btn {
+          background-color: #4077aab6;
+        }
+
+        .close-panel-btn {
+          background-color: rgba(255, 0, 0, 0.671);
+        }
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,70 @@
+.main-module{
+  padding: 2vw;
+  border-radius: 1vw;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0.05vw 0.2vw;
+
+  h2 {
+    font-size: 1vw;
+    letter-spacing: 0.03vw;
+  }
+
+  .top-btn {
+    background-color: var(--sky);
+    color: var(--white);
+    font-size: 0.6vw;
+    font-family: "reg";
+    border: 0;
+    padding: 0.4vw 0.6vw;
+    border-radius: 0.15vw;
+  }
+
+  h6 {
+    font-size: 0.7vw;
+    font-family: "italic";
+    margin: 0.8vw 0 1vw;
+    letter-spacing: 0.015vw;
+    padding-right: 1vw;
+    line-height: 1vw;
+  }
+
+  .module {
+    margin-bottom: 1.5vw;
+
+    .module-img {
+      width: 3.3vw;
+      height: 3vw;
+      border-radius: 0.3vw;
+      background-color: #d9d9d9;
+
+      img {
+        width: 3.2vw;
+        object-fit: cover;
+      }
+    }
+
+    .mod-name {
+      font-size: 0.8vw;
+      font-family: "reg";
+      margin-left: 1vw;
+      letter-spacing: 0.01vw;
+    }
+
+    .module-btns {
+      gap: 0.6vw;
+
+      .toggle-btn {
+        img {
+          width: 1.1vw;
+          object-fit: contain;
+        }
+      }
+
+      img {
+        width: 0.9vw;
+        object-fit: contain;
+      }
+    }
+  }
+
+}

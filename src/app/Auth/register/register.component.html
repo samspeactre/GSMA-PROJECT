@@ -1,0 +1,52 @@
+<section class="scroll">
+  <div class="flex main">
+    <div class="left">
+      <div class="img-text">
+        <h2>protecting People, Property & Processes <span>Since 1993</span></h2>
+        <p>Global Security Management Agency, Inc (GSMA) is a leading, regional provider of both Armed and Unarmed
+          security professionals. Our customer base includes commercial businesses, residential property management
+          companies and government agencies, making GSMA robust with experience and capable of sustaining any size
+          contract.</p>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="flex justify-between item-center">
+        <div class="logo">
+          <img src="../../../assets/img/logo.svg" alt="">
+        </div>
+        <div class="toggle-btn flex ">
+          <a href="/" class="pointer content-center text-center dec-none">Login</a>
+          <a href="/register" class="active pointer content-center text-center dec-none">Register</a>
+        </div>
+      </div>
+
+      <div class="text">
+        <h1>Create your account</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </div>
+
+      <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
+        <input type="text" placeholder="Full Name" class="form-input" formControlName="name" />
+        <input type="email" placeholder="Email address" class="form-input" formControlName="email" />
+        <input type="password" placeholder="Password" class="form-input" formControlName="password" />
+        <input type="password" placeholder="Confirm Password" class="form-input" formControlName="confirmpassword" />
+
+        <!-- Show error message if any -->
+        <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+        </div>
+
+        <button class="pointer submit-btn" type="submit" [disabled]="!registerForm.valid">Register</button>
+
+        <p class="text-center">Already have an account? <a href="" class="dec-none">Login</a></p>
+      </form>
+
+      <div class="copyright text-center">
+        © 2024 GSMA Security. All Rights Reserved.
+      </div>
+
+    </div>
+
+  </div>
+</section>

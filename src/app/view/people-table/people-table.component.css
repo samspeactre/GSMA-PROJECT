@@ -1,0 +1,108 @@
+.table-container {
+  width: 100%;
+
+  table {
+    width: 100%;
+    thead {
+      th {
+        padding: 1.1vw 0 0.9vw;
+        text-align: left;
+        border-bottom: 0.013vw solid #5a5f7d47;
+        font-size: 1.03vw;
+        font-family: "reg";
+        text-transform: capitalize;
+        letter-spacing: 0.02vw;
+
+        &:nth-child(1) {
+          width: 2.8%;
+        }
+        &:nth-child(2) {
+          width: 54%;
+        }
+        &:nth-child(3) {
+          width: 19%;
+        }
+        &:nth-child(4) {
+          width: 12.8%;
+        }
+      }
+    }
+
+    tbody {
+      td {
+        font-size: 0.9vw;
+        font-family: "reg";
+        color: var(--black);
+        padding: 1.15vw 0;
+        border-bottom: 0.01vw solid #5a5f7d33;
+        letter-spacing: 0.015vw;
+        margin-bottom: 0.02vw;
+
+        .mail {
+          font-size: 0.65vw;
+          color: #5a5f7d;
+          margin-top: 0.08vw;
+        }
+
+        .tag{
+          color: var(--white);
+          padding: 0.3vw 0.9vw;
+          font-size: 0.65vw;
+          font-family: 'reg';
+          border-radius: 1vw;
+        }
+      }
+    }
+  }
+
+  .footer{
+    height: 3vw;
+
+    .selected{
+      font-size: 0.85vw;
+      font-family: 'reg';
+      color: var(--black);
+    }
+
+    .pagination {
+      gap: 0.35vw;
+      margin: 1vw 0;
+
+      .pagination-btn,
+      .pagination-page {
+        border: 0.01vw solid #ccc;
+        background-color: #fff;
+        height: 1.7vw;
+        width: 1.7vw;
+        cursor: pointer;
+        font-size: 0.8vw;
+        color: #333;
+        font-family: 'reg';
+      }
+
+      .pagination-page:hover:not(.active) {
+        background-color: #f0f0f0;
+      }
+
+      .pagination-page.active {
+        background-color: var(--sky);
+        color: var(--white);
+        border-color: var(--sky);
+      }
+
+      .pagination-btn[disabled] {
+        cursor: not-allowed;
+        color: #aaa;
+      }
+    }
+  }
+}
+
+.active-status {
+  background-color: #39B900;
+  margin-left: 0.3vw;
+}
+
+.inactive-status {
+  background-color: red;
+}

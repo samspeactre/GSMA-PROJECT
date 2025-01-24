@@ -1,0 +1,10 @@
+.copyright{
+  font-size: 0.85vw;
+  color: var(--black);
+  font-family: "reg";
+  background-color: var(--white);
+  height: 2.7vw;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

@@ -1,0 +1,57 @@
+<section>
+  <div class="ilt-schedule">
+    <h1 class="SPHead">ILT Schedule</h1>
+    <div class="PageLinks flex">
+      <a href="" class="pointer dec-none">Dashboard</a> / <span>ILT Schedule</span>
+    </div>
+
+    <div class="main flex justify-between">
+      <div class="left">
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" class="search-input"
+            placeholder="Search by session name, module name, course name and location" [(ngModel)]="searchQuery"
+            (input)="filterEvents()">
+        </div>
+
+        <!-- Date Picker -->
+        <div class="session">
+          <h6>Session Date</h6>
+          <div class="session-event">
+            <input type="date" class="light-datepicker" [(ngModel)]="selectedDate" (change)="filterEvents()">
+          </div>
+        </div>
+
+        <!-- Events List -->
+        <div class="events-list flex justify-between">
+
+          <div *ngFor="let event of filteredEvents" class="event">
+            <div class="flex justify-between item-center">
+              <h4>{{ event.sessionName }}</h4>
+              <p>Date: <span>{{ event.date }}</span></p>
+            </div>
+            <i class="fa-solid fa-graduation-cap event-icon"></i>
+            <div class="border">
+              <p>Module: <span>{{ event.moduleName }}</span></p>
+              <p>Course: <span class="full flex">{{ event.courseName }}</span></p>
+            </div>
+            <p>Location: <span class="full flex address">{{ event.location }}</span></p>
+          </div>
+
+          <div *ngIf="selectedDate && filteredEvents.length === 0" class="no-data-text text-center">
+            No Events Found
+          </div>
+
+        </div>
+      </div>
+
+      <div class="right">
+        <div class="header-form-btn">
+          <button type="submit" class="pointer">Download</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

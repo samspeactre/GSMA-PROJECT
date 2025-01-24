@@ -1,0 +1,181 @@
+.create-course {
+
+  .main {
+    width: 100%;
+    position: relative;
+    margin-top: 1.6vw;
+
+    form {
+      width: 75%;
+      background-color: var(--white);
+      border-radius: 1vw;
+      padding: 1.3vw;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 0.05vw 0.2vw;
+
+      .form-group {
+        display: block;
+        margin-bottom: 0.9vw;
+        position: relative;
+
+        &:nth-child(2) {
+          margin-bottom: 0.3vw;
+        }
+
+        label {
+          font-size: 0.92vw;
+          font-family: "reg";
+          letter-spacing: 0.02vw;
+          color: var(--black);
+          margin-bottom: 0.5vw;
+        }
+
+        .form-control {
+          width: 100%;
+          margin-top: 0.4vw;
+          background-color: var(--bg);
+          border-radius: 0.03vw;
+          height: 3.6vw;
+          border: 0;
+          padding-left: 1vw;
+          font-size: 1.1vw;
+          color: gray;
+          font-family: "reg";
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 0.07vw 0.15vw;
+
+          &:focus {
+            outline: none;
+            border: 0;
+          }
+        }
+
+        .form-textarea {
+          padding-top: 0.8vw !important;
+          width: 100%;
+          margin-top: 0.4vw;
+          background-color: var(--bg);
+          border-radius: 0.03vw;
+          border: 0;
+          padding-left: 1vw;
+          font-size: 1.1vw;
+          color: gray;
+          font-family: "reg";
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 0.07vw 0.15vw;
+
+          &:focus {
+            outline: none;
+            border: 0;
+          }
+        }
+
+        .check-label {
+          margin-left: 1.7vw;
+        }
+
+        .checkbox {
+          width: 1.3vw;
+          height: 1.3vw;
+          position: absolute;
+          left: 0;
+        }
+
+        .upload-container {
+          background-color: var(--bg);
+          border-radius: 0.3vw;
+          height: 10vw;
+          width: 100%;
+          margin-top: 0.5vw;
+          padding: 1.2vw 0;
+
+          .upload-label {
+            img {
+              width: 3.7vw;
+              object-fit: contain;
+            }
+
+            .upload-image {
+              font-size: 0.95vw;
+              font-family: "reg";
+              color: var(--black);
+              margin-top: 0.3vw;
+            }
+
+            .small {
+              font-size: 0.65vw;
+              font-family: "reg";
+              color: var(--black);
+              margin-top: 0.6vw;
+
+              &:last-child {
+                margin-top: 0.2vw;
+              }
+            }
+          }
+        }
+      }
+
+      .button-group {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: grid;
+
+        button {
+          padding: 0 7.75vw;
+          background-color: #4076aa;
+          border-radius: 0.5vw;
+          font-size: 0.8vw;
+          font-family: "reg";
+          color: var(--white);
+          height: 3vw;
+          border: 0.01vw solid #4076aa;
+          transition: var(--transition);
+
+          &:hover {
+            background-color: transparent;
+            border: 0.01vw solid var(--black);
+            color: var(--black);
+          }
+
+          &:nth-child(2) {
+            background-color: transparent;
+            border: 0.01vw solid var(--black);
+            color: var(--black);
+            margin-top: 0.7vw;
+
+            &:hover {
+              background-color: #4076aa;
+              border: 0.01vw solid #4076aa;
+              color: var(--white);
+            }
+          }
+        }
+      }
+
+    }
+
+    .notifications {
+      width: 23.5%;
+      background-color: var(--white);
+      padding: 1vw;
+      border-radius: 0.5vw;
+      height: fit-content;
+      margin-top: 8vw;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 0.05vw 0.2vw;
+
+      h3 {
+        font-size: 0.95vw;
+        font-family: "reg";
+        color: var(--black);
+      }
+
+      p {
+        font-size: 0.73vw;
+        font-family: "reg";
+        color: var(--black);
+        margin-top: 0.7vw;
+        line-height: 1vw;
+        padding-right: 0.5vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+<div class="people">
+  <h2>People ({{ people.length }})</h2>
+
+  <div class="search">
+    <div class="search">
+      <app-search-bar [selectedFilters]="selectedFilters" (searchTerm)="onSearch($event)"
+        (filterSelected)="onFilter($event)">
+      </app-search-bar>
+    </div>
+  </div>
+
+  <div class="selected-filters flex" *ngIf="selectedFilters.length > 0">
+    <div *ngFor="let filter of selectedFilters" [ngClass]="getFilterClass(filter)" class="filter-tag">
+      <div class="filter-name">{{ filter }}</div>
+      <button (click)="removeFilter(filter)" class="pointer">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Table -->
+  <table>
+    <thead>
+      <tr>
+        <th><input type="checkbox" /></th>
+        <th>User</th>
+        <th>Assigned Date</th>
+        <th>Status</th>
+        <th>Additional Info</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of filteredPeople">
+        <td><input type="checkbox"></td>
+        <td>{{ item.User }} <br> <span>{{ item.email }}</span></td>
+        <td>{{ item.date }}</td>
+        <td>
+          <span [class.active]="item.Status === 'Active'" [class.inactive]="item.Status === 'Inactive'" class="status">
+            {{ item.Status }}
+          </span>
+        </td>
+        <td>
+          <span [class.start]="item.AddInfo === 'Started'" [class.notStart]="item.AddInfo === 'Not Started'">
+            {{ item.AddInfo }}
+          </span>
+        </td>
+        <td class="flex justify-between">
+          <a href="">Edit Result</a>
+          <a href=""><img src="../../../../assets/icons/cancel.svg" alt=""></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<div class="progress">
+  <h1>{{ progress }}% of the people assigned to this course are Compliant.</h1>
+
+  <div class="bar">
+    <app-progress-bar [progress]="progress" (progressChange)="onProgressChange($event)"></app-progress-bar>
+  </div>
+</div>
+
+
+<div class="flex main justify-between">
+  <div class="left">
+    <button>Assign to existing people</button>
+
+    <h5>Perform a bulk action on selected people</h5>
+
+    <div class="dropdown" [class.open]="isDropdownOpen">
+      <div class="dropdown-toggle flex item-center justify-between" (click)="toggleDropdown()">
+        <div class="drop-name">Choose a action</div>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <ul class="dropdown-menu" *ngIf="isDropdownOpen">
+        <li>Assign</li>
+        <li>Delete</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="right">
+    <h2>Summary</h2>
+    <p>When people complete this course they will be considered compliant forever.</p>
+  </div>
+</div>

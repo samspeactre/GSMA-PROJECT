@@ -1,0 +1,56 @@
+<section>
+  <div class="people">
+    <div class="dash-head">People</div>
+
+    <div class="search">
+      <app-search-bar (searchTerm)="onSearch($event)"></app-search-bar>
+    </div>
+
+    <div class="flex two justify-between">
+      <!-- People Table -->
+      <div class="table">
+        <app-people-table [searchQuery]="searchQuery"></app-people-table>
+      </div>
+
+      <!-- Right Panel -->
+      <div class="right">
+        <!-- Buttons -->
+        <div class="flex justify-between">
+          <button class="pointer btn">
+            <img src="../../../assets/icons/bulk-import.svg" alt="Bulk Import">
+            <div class="text">Import people in bulk</div>
+          </button>
+
+          <button class="pointer btn">
+            <img src="../../../assets/icons/mail.svg" alt="Send Emails">
+            <div class="text">Send login emails</div>
+          </button>
+        </div>
+
+        <h4>Perform a bulk action on selected people</h4>
+
+        <!-- Bulk Action Dropdown -->
+        <div class="bulk-action-container">
+          <select [(ngModel)]="selectedAction" id="bulk-action-dropdown">
+            <option value="" disabled selected hidden>Choose an action</option>
+            <option *ngFor="let action of bulkActions" [value]="action.value">
+              {{ action.label }}
+            </option>
+          </select>
+        </div>
+
+        <!-- Recently Viewed Section -->
+        <div class="recently-viewed">
+          <h4>Recently Viewed</h4>
+          <ul>
+            <li *ngFor="let user of recentlyViewed" class="dec-none">
+              {{ user }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>

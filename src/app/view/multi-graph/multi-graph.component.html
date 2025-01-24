@@ -1,0 +1,11 @@
+<div class="bar-chart">
+  <canvas id="multiChart"></canvas>
+  <div class="sub-label flex justify-between" >
+    <div *ngFor="let label of multiLabel">
+      <div class="flex item-center">
+        <div class="color" [ngStyle]="{ 'background-color': label.color }"></div>
+        <div class="name">{{label.name}}</div>
+      </div>
+    </div>
+  </div>
+</div>

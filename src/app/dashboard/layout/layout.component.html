@@ -1,0 +1,69 @@
+<div class="dashboard">
+  <div class="header">
+    <app-header></app-header>
+  </div>
+  <div class="layout flex" #layout>
+    <div class="left">
+      <div class="logo">
+        <img src="../../../assets/img/logo.svg" alt="">
+      </div>
+      <div class="side-links">
+        <ul>
+          <a routerLink="/dashboard" class="flex dec-none pointer" routerLinkActive="active blue-bg"
+            [routerLinkActiveOptions]="{ exact: true }">
+            <img src="../../../assets/icons/dashboard.svg" alt="">
+            <span>Dashboard</span>
+          </a>
+
+          <a routerLink="/dashboard/content" class="flex dec-none pointer" routerLinkActive="active blue-bg">
+            <img src="../../../assets/icons/content.svg" alt="">
+            <span>Content</span>
+          </a>
+
+          <a routerLink="/dashboard/people" class="flex dec-none pointer" routerLinkActive="active blue-bg">
+            <img src="../../../assets/icons/people.svg" alt="">
+            <span>People</span>
+          </a>
+
+          <a routerLink="/dashboard/team" class="flex dec-none pointer" routerLinkActive="active blue-bg">
+            <img src="../../../assets/icons/team.svg" alt="">
+            <span>Teams</span>
+          </a>
+
+          <a routerLink="/dashboard/reports" class="flex dec-none pointer"  routerLinkActive="active blue-bg">
+            <img src="../../../assets/icons/reports.svg" alt="">
+            <span>Reports</span>
+          </a>
+
+          <a routerLink="/quickassign" class="flex dec-none pointer" routerLinkActive="active blue-bg">
+            <img src="../../../assets/icons/quickassign.svg" alt="">
+            <span>Quick Assign</span>
+          </a>
+
+          <a routerLink="/community" class="flex dec-none pointer" routerLinkActive="active blue-bg">
+            <img src="../../../assets/icons/community.svg" alt="">
+            <span>Community</span>
+          </a>
+
+          <a routerLink="/help" class="flex dec-none pointer" routerLinkActive="active blue-bg">
+            <img src="../../../assets/icons/help.svg" alt="">
+            <span>Help</span>
+          </a>
+
+          <a routerLink="/logout" class="flex dec-none pointer" routerLinkActive="active blue-bg">
+            <img src="../../../assets/icons/logout.svg" alt="">
+            <span>Logout</span>
+          </a>
+        </ul>
+      </div>
+    </div>
+    <div class="right">
+      <div class="pages">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="copy-right">
+        <!-- <app-copyright></app-copyright> -->
+      </div>
+    </div>
+  </div>
+</div>

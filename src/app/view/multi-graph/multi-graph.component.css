@@ -1,0 +1,26 @@
+.bar-chart {
+  canvas {
+    height: 17.8vw !important;
+    width: 29.2vw !important;
+    margin-left: -0.5vw;
+  }
+
+  .sub-label {
+    gap: 0.3vw;
+    padding-left: 1.5vw;
+    margin-top: 0.2vw;
+    width: 95.5%;
+
+    .color{
+      width: 0.9vw;
+      height: 0.2vw;
+    }
+
+    .name {
+      font-size: 0.5vw;
+      font-family: "reg";
+      color: var(--black);
+      margin-left: 0.2vw;
+    }
+  }
+}

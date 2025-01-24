@@ -1,0 +1,137 @@
+.main {
+  background-color: var(--dark);
+
+  .left {
+    width: 65%;
+    background-image: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 50%,
+        #174a7c 100%
+      ),
+      url("../../../assets/img/auth-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top-right-radius: 5vw;
+    border-bottom-right-radius: 5vw;
+    padding: 0 3.7vw;
+    height: 56vw;
+
+    .img-text {
+      color: var(--white);
+      width: 32%;
+      position: absolute;
+      bottom: -6.8vw;
+
+      h2 {
+        font-family: "reg";
+        line-height: 3.2vw;
+        text-transform: capitalize;
+
+        span {
+          font-family: "bold";
+        }
+      }
+
+      p {
+        font-family: "reg";
+        font-size: 0.81vw;
+        padding-top: 1.5vw;
+        line-height: 1.3vw;
+      }
+
+      /* img {
+        width: 10vw;
+        height: 11vw;
+      } */
+    }
+  }
+
+  .right {
+    width: 34%;
+    padding: 2.2vw 2.8vw 2.2vw 3.2vw;
+    position: relative;
+
+    .logo {
+      img {
+        width: 6.7vw;
+        height: 6.7vw;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid white;
+      }
+    }
+
+    .toggle-btn {
+      width: 15.6vw;
+      height: 2.8vw;
+      background-color: var(--input);
+      border-radius: 3vw;
+
+      a {
+        width: 50%;
+        border-radius: 3vw;
+        background-color: transparent;
+        color: var(--white);
+        font-family: "reg";
+        font-size: 1vw;
+        border: 0;
+      }
+
+      .active {
+        background-color: var(--sky);
+      }
+    }
+
+    .text {
+      color: var(--white);
+      margin-top: 2.2vw;
+
+      h1 {
+        font-family: "reg";
+      }
+
+      p {
+        font-family: "reg";
+        font-size: 1.01vw;
+        margin-top: 1.5vw;
+        padding-right: 6vw;
+        line-height: 1.55vw;
+      }
+    }
+
+    form {
+      margin-top: 2.1vw;
+
+      .form-input {
+        margin-bottom: 1vw;
+      }
+
+      .submit-btn{
+        margin-top: 0.8vw;
+      }
+
+      p{
+        margin-top: 1.8vw;
+        color: var(--white);
+        font-family: 'reg';
+        font-size: 0.8vw;
+
+        a{
+          color: var(--white);
+          font-family: 'med';
+          margin-left: 0.2vw;
+        }
+      }
+    }
+
+    .copyright{
+      font-size: 1vw;
+      font-family: 'reg';
+      color: var(--white);
+      position: absolute;
+      bottom: 1.5vw;
+      left: 7.5vw;
+    }
+  }
+}

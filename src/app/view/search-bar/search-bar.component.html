@@ -1,0 +1,32 @@
+<div class="srch-bar">
+  <!-- Search Input -->
+  <img src="../../../assets/icons/search.svg" alt="" class="search-icon">
+  <input type="search" placeholder="Quick Search" (input)="onSearchChange($event)" />
+
+  <!-- Filter Button -->
+  <div class="filter-btn">
+    <button class="flex item-center pointer" (click)="toggleFilterPanel()">
+      <img src="../../../assets/icons/filter.svg" alt="" />
+      <span>Filter</span>
+    </button>
+  </div>
+
+  <!-- Filter Panel -->
+  <div *ngIf="isFilterPanelVisible" class="filter-panel">
+    <div class="filter-options flex justify-between">
+      <!-- Filters -->
+      <label *ngFor="let filter of filters" class="filter-option flex item-center">
+        <input type="checkbox" [checked]="selectedFilters.includes(filter)" (change)="toggleFilter(filter)" />
+        <div class="filter-name">{{ filter }}</div>
+      </label>
+
+      <div class="btn-div flex justify-between">
+        <!-- Remove All Filters Button -->
+        <button class="remove-all-btn pointer" (click)="clearFilters()">Remove All</button>
+
+        <!-- Close Filter Panel Button -->
+        <button class="close-panel-btn pointer" (click)="closeFilterPanel()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

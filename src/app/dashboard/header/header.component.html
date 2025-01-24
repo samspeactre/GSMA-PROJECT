@@ -1,0 +1,49 @@
+<section>
+  <nav class="flex justify-between item-center">
+    <div class="links flex justify-between">
+
+      <a routerLink="/dashboard/create-course" class="dec-none pointer">
+        <img src="../../../assets/icons/course.svg" alt="">
+        <span>Create a course</span>
+      </a>
+
+      <a routerLink="/dashboard/create-user" class="dec-none pointer">
+        <img src="../../../assets/icons/user.svg" alt="">
+        <span>Create a user</span>
+      </a>
+
+      <a routerLink="/dashboard/create-team" class="dec-none pointer">
+        <img src="../../../assets/icons/create-team.svg" alt="">
+        <span>Create a team</span>
+      </a>
+
+      <a routerLink="/dashboard/ilt-schedule" class="dec-none pointer">
+        <img src="../../../assets/icons/ilt-schedule.svg" alt="">
+        <span>Upcoming ILT schedule</span>
+      </a>
+    </div>
+
+    <div class="menu flex item-center justify-between">
+      <a routerLink="/dashboard/create-course">
+        <div class="ball"></div>
+        <img src="../../../assets/icons/mail.svg" alt="">
+      </a>
+      <a routerLink="/dashboard/create-course">
+        <div class="ball"></div>
+        <img src="../../../assets/icons/notify.svg" alt="">
+      </a>
+
+      <div class="dropdown" [class.open]="isDropdownOpen">
+        <div class="dropdown-toggle flex item-center" (click)="toggleDropdown()">
+          <span class="user-name">{{ 'Johnathan Doe' | slice:0:10 }}</span>
+          <i class="fa-solid fa-angle-down"></i>
+          <img src="../../../assets/img/profile.png" alt="User Profile" class="profile-image"/>
+        </div>
+        <ul class="dropdown-menu" *ngIf="isDropdownOpen">
+          <li><a href="" class="dec-none">Logout</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</section>

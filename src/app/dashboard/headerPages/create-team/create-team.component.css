@@ -1,0 +1,37 @@
+.create-user {
+  .main-head {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1.5vw;
+    margin-top: 1.8vw;
+    height: 100vh;
+
+    form {
+      .left {
+        width: 75%;
+        background-color: var(--white);
+        border-radius: 1vw;
+        padding: 2.1vw 1.3vw 2vw 1.2vw;
+
+        .top-form-text {
+          margin-bottom: 1.8vw;
+
+          .italic {
+            background-color: var(--white);
+            border-radius: 1vw;
+            font-size: 0.7vw;
+            font-family: "italic";
+            letter-spacing: 0.05vw;
+            margin-bottom: 0.3vw;
+          }
+        }
+
+        .full {
+          width: 100%;
+          margin-bottom: 0.9vw;
+        }
+      }
+
+    }
+  }
+}

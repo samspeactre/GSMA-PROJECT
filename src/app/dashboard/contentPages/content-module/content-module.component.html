@@ -1,0 +1,36 @@
+<div class="main-module">
+  <div class="flex justify-between">
+    <h2>Modules ({{ module.length }})</h2>
+    <button class="top-btn pointer">Add Modules</button>
+  </div>
+  <h6>
+    Adding/removing modules, changing status (active/inactive) or (optional/mandatory) will update results for
+    assigned users that are not already complete.
+  </h6>
+
+  <div class="module flex item-center justify-between" *ngFor="let item of module">
+
+    <div class="flex item-center">
+      <div class="module-img">
+        <img [src]="item.imgSrc" alt="" class="content-center">
+      </div>
+
+      <div class="mod-name">
+        {{item.name}}
+      </div>
+    </div>
+
+    <div class="module-btns flex">
+      <div class="toggle-btn" (click)="toggleState()">
+        <img *ngIf="!isOn" src="../../../../assets/icons/toggle-off.svg" alt="Toggle Off" class="pointer" />
+        <img *ngIf="isOn" src="../../../../assets/icons/toggle-on.svg" alt="Toggle On" class="pointer" />
+      </div>
+
+      <img src="../../../../assets/icons/edit-mod.svg" alt="" class="pointer">
+      <img src="../../../../assets/icons/cancel.svg" alt="" class="pointer">
+
+    </div>
+
+  </div>
+
+</div>

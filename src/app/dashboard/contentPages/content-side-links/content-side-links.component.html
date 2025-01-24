@@ -1,0 +1,53 @@
+<div class="right">
+  <!-- <div class="links pointer" [routerLink]="['/dashboard/content/all-courses']" routerLinkActive="active">
+    <i class="fa-solid fa-list"></i>
+    <span>Content</span>
+  </div>
+  <div class="links pointer" routerLinkActive="active">
+    <i class="fa-solid fa-user"></i>
+    <span>People</span>
+  </div> -->
+
+  <div class="links pointer" [class.active]="activeLink === 'content'" (click)="setActiveLink('content')">
+    <i class="fa-solid fa-list"></i>
+    <span>Content</span>
+  </div>
+  <div class="links pointer" [class.active]="activeLink === 'people'" (click)="setActiveLink('people')">
+    <i class="fa-solid fa-user"></i>
+    <span>People</span>
+  </div>
+  <div class="links pointer" [class.active]="activeLink === 'learning-path'" (click)="setActiveLink('learning-path')">
+    <i class="fa-solid fa-book"></i>
+    <span>learning paths</span>
+  </div>
+  <div class="links pointer" [class.active]="activeLink === 'teams'" (click)="setActiveLink('teams')">
+    <i class="fa-solid fa-people-group"></i>
+    <span>Teams</span>
+  </div>
+
+  <div class="links pointer" [class.active]="activeLink === 'instructor'" (click)="setActiveLink('instructor')">
+    <i class="fa-solid fa-graduation-cap"></i>
+    <span>proficient instructors</span>
+  </div>
+  <div class="links pointer" [class.active]="activeLink === 'noticeboard'" (click)="setActiveLink('noticeboard')">
+    <i class="fa-solid fa-bullhorn"></i>
+    <span>noticeboard</span>
+  </div>
+  <div class="links pointer" [class.active]="activeLink === 'references'" (click)="setActiveLink('references')">
+    <i class="fa-solid fa-file-lines"></i>
+    <span>addtional prefrences</span>
+  </div>
+  <div class="links pointer" [class.active]="activeLink === 'rating'" (click)="setActiveLink('rating')">
+    <i class="fa-regular fa-star"></i>
+    <span>ratings</span>
+  </div>
+  <div class="links pointer" [class.active]="activeLink === 'history'" (click)="setActiveLink('history')">
+    <i class="fa-solid fa-clock-rotate-left"></i>
+    <span>history</span>
+  </div>
+  <div class="links pointer" routerLinkActive="active">
+    <i class="fa-solid fa-gear"></i>
+    <span>settings</span>
+  </div>
+
+</div>
