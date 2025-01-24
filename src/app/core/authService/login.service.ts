@@ -7,11 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class LoginService {
 
-  // private loginUrl = 'http://lmsbackend.atwebpages.com/api/auth/login';
+  private loginUrl = 'http://lmsbackend.atwebpages.com/api/auth/login';
 
-  // constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
-  // loginUser(email: string, password: string): Observable<any> {
-  //   return this.http.post(this.loginUrl, { email, password });
-  // }
+  loginUser(email: string, password: string): Observable<any> {
+    return this.http.post(this.loginUrl, { email, password });
+  }
 }

@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 })
 export class RegisterComponent {
   registerForm: FormGroup;
-  errorMessage: string = '';
+  errorMessage: string = ''; // Variable to store error messages
 
   constructor(
     private fb: FormBuilder,
@@ -25,33 +25,36 @@ export class RegisterComponent {
       name: [''],
       email: [''],
       password: [''],
-      confirmpassword: ['']
+      confirmpassword: [''] // Fixed the name to match logic
     });
   }
 
-  // onSubmit(): void {
-  //   if (this.registerForm.valid) {
-  //     const { name, email, password, confirmpassword } = this.registerForm.value;
+  onSubmit(): void {
+    if (this.registerForm.valid) {
+      const { name, email, password, confirmpassword } = this.registerForm.value;
 
-  //     if (password.trim() !== confirmpassword.trim()) {
-  //       alert('Passwords do not match!');
-  //       return;
-  //     }
+      // Check if passwords match
+      if (password.trim() !== confirmpassword.trim()) {
+        alert('Passwords do not match!');
+        return;
+      }
 
-  //     const userData = { name, email, password, confirmpassword };
+      // Prepare user data for registration
+      const userData = { name, email, password, confirmpassword };
 
-  //     this.registerService.registerUser(userData).subscribe({
-  //       next: (response) => {
-  //         alert('Registration successful!');
-  //         this.router.navigate(['/login']);
-  //       },
-  //       error: (error) => {
-  //         this.errorMessage = 'Registration failed. Please try again.';
-  //         console.error('Error during registration:', error);
-  //       }
-  //     });
-  //   } else {
-  //     alert('Please fill in all fields correctly.');
-  //   }
-  // }
+      // Call the service to register the user
+      this.registerService.registerUser(userData).subscribe({
+        next: (response) => {
+          alert('Registration successful!');
+          this.router.navigate(['/login']);
+        },
+        error: (error) => {
+          this.errorMessage = 'Registration failed. Please try again.';
+          console.error('Error during registration:', error);
+        }
+      });
+    } else {
+      alert('Please fill in all fields correctly.');
+    }
+  }
 }

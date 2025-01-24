@@ -26,8 +26,7 @@
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       </div>
 
-      <form >
-        <!-- (ngSubmit)="onSubmit()" -->
+      <form (ngSubmit)="onSubmit()">
         <input type="email" placeholder="Enter your email address*" class="form-input" [(ngModel)]="email" name="email"
           required />
         <input type="password" placeholder="Password" class="form-input" [(ngModel)]="password" name="password"
@@ -39,7 +38,7 @@
           </div>
           <a href="" class="forget dec-none">Forget Password</a>
         </div>
-        <button routerLink="/dashboard" class="pointer submit-btn">Login</button>
+        <button type="submit" class="pointer submit-btn">Login</button>
 
         <p class="text-center">
           Don’t have an account? <a href="/register" class="dec-none">SignUp</a>
